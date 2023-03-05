@@ -1,0 +1,17 @@
+query searchWorksBySeasons($seasons: [String!]) {
+  searchWorks(
+    seasons: $seasons
+    orderBy: { field: WATCHERS_COUNT, direction: DESC }
+  ) {
+    nodes {
+      annictId
+      image {
+        facebookOgImageUrl
+        recommendedImageUrl
+      }
+      officialSiteUrl
+      title
+      twitterUsername
+    }
+  }
+}
