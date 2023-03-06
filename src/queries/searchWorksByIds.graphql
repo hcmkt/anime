@@ -1,0 +1,14 @@
+query searchWorksByIds($ids: [Int!]) {
+  searchWorks(annictIds: $ids) {
+    nodes {
+      annictId
+      image {
+        facebookOgImageUrl
+        recommendedImageUrl
+      }
+      officialSiteUrl
+      title
+      twitterUsername
+    }
+  }
+}
